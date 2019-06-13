@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <style>
+
+        @keyframes superRotateAbout {
+            0% { transform: translate(calc(-100vw / 2), calc(-100vh / 2)) }
+            100% { transform: translate(0px, 0px) }
+        }
+        @keyframes contRotate {
+            0% { transform: rotate(55deg) scale(4); }
+            100% { transform: rotate(0deg) scale(1); }
+        }
+        @keyframes superRotatePeople {
+            0% { transform: translate(calc(-100vw / 2), calc(-100vh / 2)) }
+            100% { transform: translate(-100vw) }
+        }
+        @keyframes superRotateContact {
+            0% { transform: translate(calc(-100vw / 2), calc(-100vh / 2)) }
+            100% { transform: translate(-100vw, -100vh) }
+        }
+        @keyframes superRotateServices {
+            0% { transform: translate(calc(-100vw / 2), calc(-100vh / 2)) }
+            100% { transform: translate(0px, -100vh) }
+        }
+        @keyframes superRotateContact {
+            0% { transform: translate(calc(-100vw / 2), calc(-100vh / 2)) }
+            100% { transform: translate(-100vw, -100vh) }
+        }
+        @keyframes superRotateAboutToHome {
+            0% { transform: translate(0px, 0px) }
+            100% { transform: translate(calc(-100vw / 2), calc(-100vh / 2)) }
+        }
+        @keyframes superRotatePeopleToHome {
+            0% { transform: translate(-100vw) }
+            100% { transform: translate(calc(-100vw / 2), calc(-100vh / 2)) }
+        }
+        @keyframes superRotateContactToHome {
+            0% { transform:  translate(-100vw, -100vh) }
+            100% { transform: translate(calc(-100vw / 2), calc(-100vh / 2)) }
+        }
+        @keyframes superRotateServicesToHome {
+          0% {transform: translate(0px, -100vh)}
+          100% {transform: translate(calc(-100vw/2), calc(-100vh / 2))}
+        }
+        @keyframes contRotateToHome {
+            0% { transform: rotate(0deg) scale(1); }
+            100% { transform: rotate(55deg) scale(4); }
+        }
+
+        /* Not working */
+        @keyframes overFlowTransition {
+            0%, 50% { overflow: hidden; }
+            100% { overflow: auto; }
+        }
+        .about-zoom-section {
+          top: calc(100% - 50px);
+          position: relative;
+          right: 0;
+        }
+        .about-zoom-section-inner {
+          transform: rotate(270deg);
+          float: right;
+        }
+        .people-zoom-section {
+          position: relative;
+          top: calc(100% - 50px);
+        }
+        .people-zoom-section-inner {
+          transform: rotate(270deg);
+          float: left; 
+        }
+        .services-zoom-section {
+          position: relative;
+          top: 39px;
+          left:7px;
+        }
+        .services-zoom-section-inner {
+          float: right; 
+          transform: rotate(270deg)
+        }
+        .contact-zoom-section {
+          position: relative;
+          top: 39px;
+          left: -6px;
+        }
+        .contact-zoom-section-inner {
+          transform: rotate(270deg);
+          float: left; 
+        }
+        .super-rotate-about-to-home {
+            animation: superRotateAboutToHome 1.5s;
+            transform: translate(calc(-100vw / 2), calc(-100vh / 2));
+        }
+        .super-rotate-people-to-home {
+          animation: superRotatePeopleToHome 1.5s;
+          transform: translate(calc(-100vw / 2), calc(-100vh / 2));
+        }
+        .super-rotate-contact-to-home {
+          animation: superRotateContactToHome 1.5s;
+          transform: translate(calc(-100vw / 2), calc(-100vh / 2));
+        }
+        .super-rotate-services-to-home {
+          animation: superRotateServicesToHome 1.5s;
+          transform: translate(calc(-100vw / 2), calc(-100vh / 2));
+        }
+        .cont-rotate-to-home {
+            animation: contRotateToHome 1.5s;
+            transform: rotate(55deg) scale(4);
+        }
+        .super-rotate-about {
+            animation: superRotateAbout 1.5s;
+            transform: translate(0px, 0px)
+        }
+        .cont-rotate {
+            animation: contRotate 1.5s;
+            transform: rotate(0deg) scale(1);
+        }
+        .super-rotate-people {
+            animation: superRotatePeople 1.5s;
+            transform: translate(-100vw)
+        }
+        .super-rotate-services {
+            animation: superRotateServices 1.5s;
+            transform: translate(0px,-100vh)
+        }
+        .super-rotate-contact {
+            animation: superRotateContact 1.5s;
+            transform: translate(-100vw, -100vh)
+        }
+        .super-cont {
+            transform: translate(calc(-100vw / 2), calc(-100vh / 2))
+        }
+        .cont-transform {
+            transform: rotate(55deg) scale(4);
+        }
+        .overFlow-hidden {
+            overflow: hidden;
+        }
+        .overFlow-auto {
+            animation: overflowTransition 5s;
+            overflow: auto;
+        }
+        .cont {
+            width: calc(100vw * 2);
+            height: calc(100vh * 2);
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #about {
+            background-color: lightgray;
+            width: 100vw;
+            height: 100vh;
+        }
+        #people {
+            background-color: red;
+            width: 100vw;
+            height: 100vh;
+            
+        }
+        #contact{
+            background-color: green;
+            width: 100vw;
+            height: 100vh;
+        }
+        #services {
+            background-color: yellow;
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body style="overflow: hidden">
+<div>
+    <div id="main-container" class="super-cont">
+        <div id="container" class="cont cont-transform">
+            <div id="about" class="overflow-hidden">
+              <div class="about-zoom-section">
+                <div class="about-zoom-section-inner">
+                  <a onclick="rotate('about')">
+                    About
+                  </a>
+                </div>
+                </div>
+                <section>
+                    <div class="container">
+                        <div class="row">
+                                <main role="main">
+
+                                        <section class="jumbotron text-center">
+                                          <div class="container">
+                                            <h1 class="jumbotron-heading">Album example</h1>
+                                            <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+                                            <p>
+                                              <a href="#" class="btn btn-primary my-2">Main call to action</a>
+                                              <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+                                            </p>
+                                          </div>
+                                        </section>
+                                  
+                                        <div class="album py-5 bg-light">
+                                          <div class="container">
+                                  
+                                            <div class="row">
+                                              <div class="col-md-4">
+                                                <div class="card mb-4 box-shadow">
+                                                  <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22226%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20226%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16b4a08c3c4%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16b4a08c3c4%22%3E%3Crect%20width%3D%22348%22%20height%3D%22226%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.71875%22%20y%3D%22120.678125%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
+                                                  <div class="card-body">
+                                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                      <div class="btn-group">
+                                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                      </div>
+                                                      <small class="text-muted">9 mins</small>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="col-md-4">
+                                                <div class="card mb-4 box-shadow">
+                                                  <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22226%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20226%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16b4a08c3ca%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16b4a08c3ca%22%3E%3Crect%20width%3D%22348%22%20height%3D%22226%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.71875%22%20y%3D%22120.678125%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                                                  <div class="card-body">
+                                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                      <div class="btn-group">
+                                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                      </div>
+                                                      <small class="text-muted">9 mins</small>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="col-md-4">
+                                                <div class="card mb-4 box-shadow">
+                                                  <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22226%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20226%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16b4a08c3cd%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16b4a08c3cd%22%3E%3Crect%20width%3D%22348%22%20height%3D%22226%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.71875%22%20y%3D%22120.678125%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                                                  <div class="card-body">
+                                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                      <div class="btn-group">
+                                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                      </div>
+                                                      <small class="text-muted">9 mins</small>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                  
+                                              <div class="col-md-4">
+                                                <div class="card mb-4 box-shadow">
+                                                  <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22226%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20226%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16b4a08c3cf%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16b4a08c3cf%22%3E%3Crect%20width%3D%22348%22%20height%3D%22226%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.71875%22%20y%3D%22120.678125%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                                                  <div class="card-body">
+                                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                      <div class="btn-group">
+                                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                      </div>
+                                                      <small class="text-muted">9 mins</small>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="col-md-4">
+                                                <div class="card mb-4 box-shadow">
+                                                  <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22226%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20226%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16b4a08c3d1%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16b4a08c3d1%22%3E%3Crect%20width%3D%22348%22%20height%3D%22226%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.71875%22%20y%3D%22120.678125%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                                                  <div class="card-body">
+                                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                      <div class="btn-group">
+                                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                      </div>
+                                                      <small class="text-muted">9 mins</small>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="col-md-4">
+                                                <div class="card mb-4 box-shadow">
+                                                  <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22226%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20226%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16b4a08c3d3%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16b4a08c3d3%22%3E%3Crect%20width%3D%22348%22%20height%3D%22226%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.71875%22%20y%3D%22120.678125%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                                                  <div class="card-body">
+                                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                      <div class="btn-group">
+                                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                      </div>
+                                                      <small class="text-muted">9 mins</small>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                  
+                                              <div class="col-md-4">
+                                                <div class="card mb-4 box-shadow">
+                                                  <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22226%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20226%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16b4a08c3d5%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16b4a08c3d5%22%3E%3Crect%20width%3D%22348%22%20height%3D%22226%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.71875%22%20y%3D%22120.678125%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                                                  <div class="card-body">
+                                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                      <div class="btn-group">
+                                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                      </div>
+                                                      <small class="text-muted">9 mins</small>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="col-md-4">
+                                                <div class="card mb-4 box-shadow">
+                                                  <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22226%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20226%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16b4a08c3d7%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16b4a08c3d7%22%3E%3Crect%20width%3D%22348%22%20height%3D%22226%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.71875%22%20y%3D%22120.678125%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                                                  <div class="card-body">
+                                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                      <div class="btn-group">
+                                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                      </div>
+                                                      <small class="text-muted">9 mins</small>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="col-md-4">
+                                                <div class="card mb-4 box-shadow">
+                                                  <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22226%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20226%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16b4a08c3d9%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16b4a08c3d9%22%3E%3Crect%20width%3D%22348%22%20height%3D%22226%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.71875%22%20y%3D%22120.678125%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                                                  <div class="card-body">
+                                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                      <div class="btn-group">
+                                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                      </div>
+                                                      <small class="text-muted">9 mins</small>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                  
+                                      </main>
+                        </div>
+                    </div>
+                </section>
+            </div>   
+            <div id="people">
+              <div class="people-zoom-section">
+                <div class="people-zoom-section-inner">
+                <a onclick="rotate('people')">
+                  People
+                </a>
+                </div>
+              </div>
+            </div> 
+            <div id="services">
+              <div class="services-zoom-section">
+                <div class="services-zoom-section-inner">
+                <a onclick="rotate('services')">
+                  Services 
+                </a>
+                </div>
+              </div>
+            </div>
+            <div id="contact">
+              <div class="contact-zoom-section">
+                <div class="contact-zoom-section-inner">
+                <a onclick="rotate('contact')">
+                  Contact
+                </a>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    let state = {
+      previous: 'home',
+      current: 'home'
+    }
+    function rotate(section) {
+        if (state.current == 'home') {
+            var superCont = document.getElementById('main-container');
+            var container = document.getElementById('container');
+            var page = document.getElementById(section);
+            superCont.classList.remove('super-rotate-'+state.previous+'-to-home');
+            container.classList.add('cont-rotate-to-home');
+            page.classList.remove('overFlow-hidden');
+            superCont.classList.remove('super-cont');
+            container.classList.remove('cont-transform');
+            page.classList.add('overFlow-auto');
+            superCont.classList.add('super-rotate-'+section);
+            container.classList.add('cont-rotate');
+            state.current = section
+            state.previous = 'home'
+        } else {
+            var superCont = document.getElementById('main-container');
+            var container = document.getElementById('container');
+            var page = document.getElementById(section);
+            page.classList.remove('overFlow-auto');
+           
+            page.classList.add('overFlow-hidden');
+            superCont.classList.add('super-rotate-'+section+'-to-home');
+            container.classList.add('cont-rotate-to-home');
+            superCont.classList.remove('super-rotate-'+section);
+            container.classList.remove('cont-rotate');
+            state.current = 'home';
+            state.previous = section;
+        }
+    }
+</script>
+</html>
