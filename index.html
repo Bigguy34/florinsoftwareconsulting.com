@@ -58,14 +58,21 @@
             0%, 50% { overflow: hidden; }
             100% { overflow: auto; }
         }
+
+        @keyframes logoAboutTransition {
+          0% { margin-right: 0px; margin-bottom: 0px }
+          100% {margin-right: 50px; margin-bottom: 50px;}
+        }
+
         .about-zoom-section {
-          top: calc(100% - 50px);
-          position: relative;
-          right: 0;
+          width: 100%;
+          height: 100%;
         }
         .about-zoom-section-inner {
-          transform: rotate(270deg);
-          float: right;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: flex-end;
         }
         .people-zoom-section {
           position: relative;
@@ -109,6 +116,12 @@
           animation: superRotateServicesToHome 1.5s;
           transform: translate(calc(-100vw / 2), calc(-100vh / 2));
         }
+        #logo-cont-about {
+          animation: logoAboutTransition;
+          margin-right: 50px; 
+          margin-bottom: 50px;
+
+        }
         .cont-rotate-to-home {
             animation: contRotateToHome 1.5s;
             transform: rotate(55deg) scale(4);
@@ -137,7 +150,7 @@
             transform: translate(calc(-100vw / 2), calc(-100vh / 2)) scale(4)
         }
 
-        .logo-cont {
+        #logo-cont {
           transform: translate(calc(-100vw / 2), calc(-100vh / 2))
         }
         .cont-transform {
@@ -178,7 +191,7 @@
             width: 100vw;
             height: 100vh;
         }
-        .image-cont {
+        #image-cont {
           width: calc(100vw*2);
           display: flex;
           position: fixed;
@@ -192,13 +205,16 @@
 <div style="overflow: hidden; position: fixed">
     <div id="main-container" class="super-cont">
         <div id="container" class="cont cont-transform">
-            <div class="image-cont">
+            <div id="image-cont">
                 <img src="logo_white_background.svg" style="width:2.5em; transform: rotate(-55deg)">
             </div>
             <div id="about" class="overflow-hidden">
               <div class="about-zoom-section">
                 <div class="about-zoom-section-inner">
-                  <a onclick="rotate('about')">
+                  <a onclick="rotate('about')" style="    justify-self: baseline;
+                  align-self: flex-end;
+                  transform: rotate(270deg);
+                  margin-bottom: 35px;">
                     About
                   </a>
                 </div>
@@ -245,7 +261,8 @@
             var superCont = document.getElementById('main-container');
             var container = document.getElementById('container');
             var page = document.getElementById(section);
-            superCont.classList.remove('super-rotate-'+state.previous+'-to-home');
+            var logo = document.getElementById('logo-cont')
+            superCont.classList.remove('super-rotate-'+ state.previous+'-to-home');
             container.classList.add('cont-rotate-to-home');
             page.classList.remove('overFlow-hidden');
             superCont.classList.remove('super-cont');
@@ -262,9 +279,9 @@
             page.classList.remove('overFlow-auto');
            
             page.classList.add('overFlow-hidden');
-            superCont.classList.add('super-rotate-'+section+'-to-home');
+            superCont.classList.add('super-rotate-' + section + '-to-home');
             container.classList.add('cont-rotate-to-home');
-            superCont.classList.remove('super-rotate-'+section);
+            superCont.classList.remove('super-rotate-' + section);
             container.classList.remove('cont-rotate');
             state.current = 'home';
             state.previous = section;
