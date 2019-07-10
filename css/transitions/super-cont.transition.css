@@ -1,0 +1,36 @@
+@keyframes superRotateAbout {
+  0% { transform: translate(calc(-100vw / 2), calc(-100vh / 2)) }
+  100% { transform: translate(0px, 0px) }
+}
+@keyframes superRotatePeople {
+  0% { transform: translate(calc(-100vw / 2), calc(-100vh / 2)) }
+  100% { transform: translate(-100vw) }
+}
+@keyframes superRotateContact {
+  0% { transform: translate(calc(-100vw / 2), calc(-100vh / 2)) }
+  100% { transform: translate(-100vw, -100vh) }
+}
+@keyframes superRotateServices {
+  0% { transform: translate(calc(-100vw / 2), calc(-100vh / 2)) }
+  100% { transform: translate(0px, -100vh) }
+}
+@keyframes superRotateContact {
+  0% { transform: translate(calc(-100vw / 2), calc(-100vh / 2)) }
+  100% { transform: translate(-100vw, -100vh) }
+}
+@keyframes superRotateAboutToHome {
+  0% { transform: translate(0px, 0px) }
+  100% { transform: translate(calc(-100vw / 2), calc(-100vh / 2)) }
+}
+@keyframes superRotatePeopleToHome {
+  0% { transform: translate(-100vw) }
+  100% { transform: translate(calc(-100vw / 2), calc(-100vh / 2)) }
+}
+@keyframes superRotateContactToHome {
+  0% { transform:  translate(-100vw, -100vh) }
+  100% { transform: translate(calc(-100vw / 2), calc(-100vh / 2)) }
+}
+@keyframes superRotateServicesToHome {
+  0% {transform: translate(0px, -100vh)}
+  100% {transform: translate(calc(-100vw/2), calc(-100vh / 2))}
+}

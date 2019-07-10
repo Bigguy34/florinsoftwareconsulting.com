@@ -1,0 +1,9 @@
+@keyframes logoAboutTransition {
+  0% { margin-right: 0px; margin-bottom: 0px; transform: rotate(-55deg) }
+  100% { margin-right: 60px; margin-bottom: 60px; transform: rotate(-0deg) }
+}
+
+@keyframes logoAboutHomeTransition {
+  0% { margin-right: 60px; margin-bottom: 60px; transform: rotate(-0deg) }
+  100% { margin-right: 0px; margin-bottom: 0px; transform: rotate(-55deg) }
+}

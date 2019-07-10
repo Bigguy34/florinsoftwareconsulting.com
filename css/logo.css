@@ -1,0 +1,22 @@
+@import url('./transitions/logo.transition.css');
+
+#logo-cont {
+  transform: translate(calc(-100vw / 2), calc(-100vh / 2))
+}
+.logo-home {
+  margin-right: 0px;
+  margin-bottom: 0px;
+  transform: rotate(-55deg);
+}
+.logo-about-home {
+  animation: logoAboutHomeTransition 1.5s;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  transform: rotate(-55deg);
+}
+.logo-about {
+  animation: logoAboutTransition 1.5s;
+  margin-right: 60px;
+  margin-bottom: 60px;
+  transform: rotate(0deg)
+}

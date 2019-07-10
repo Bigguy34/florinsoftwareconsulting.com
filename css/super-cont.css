@@ -1,0 +1,37 @@
+@import url('./transitions//super-cont.transition.css');
+
+.super-cont {
+  transform: translate(calc(-100vw / 2), calc(-100vh / 2)) scale(4)
+}
+.super-rotate-people {
+  animation: superRotatePeople 1.5s;
+  transform: translate(-100vw)
+}
+.super-rotate-services {
+  animation: superRotateServices 1.5s;
+  transform: translate(0px,-100vh)
+}
+.super-rotate-contact {
+  animation: superRotateContact 1.5s;
+  transform: translate(-100vw, -100vh)
+}
+.super-rotate-about {
+  animation: superRotateAbout 1.5s;
+  transform: translate(0px, 0px)
+}
+.super-rotate-about-to-home {
+  animation: superRotateAboutToHome 1.5s;
+  transform: translate(calc(-100vw / 2), calc(-100vh / 2));
+}
+.super-rotate-people-to-home {
+  animation: superRotatePeopleToHome 1.5s;
+  transform: translate(calc(-100vw / 2), calc(-100vh / 2));
+}
+.super-rotate-contact-to-home {
+  animation: superRotateContactToHome 1.5s;
+  transform: translate(calc(-100vw / 2), calc(-100vh / 2));
+}
+.super-rotate-services-to-home {
+  animation: superRotateServicesToHome 1.5s;
+  transform: translate(calc(-100vw / 2), calc(-100vh / 2));
+}

@@ -1,0 +1,14 @@
+.people-zoom-section {
+  position: relative;
+  top: calc(100% - 50px);
+}
+
+.people-zoom-section-inner {
+  transform: rotate(270deg);
+  float: left; 
+}
+
+#people {
+  width: 100vw;
+  height: 100vh;
+}
