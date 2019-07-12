@@ -3,7 +3,9 @@ function logoRotate(section, state) {
       var logo = document.getElementById('logo');
       logo.classList.add(`logo-${section}`)
       logo.classList.remove('logo-home')
-      logo.classList.remove(`logo-${state.current}-home`)
+      if (logo.classList.contains(`logo-${state.previous}-home`)) {
+        logo.classList.remove(`logo-${state.previous}-home`)
+      }
     } else {
       var logo = document.getElementById('logo');
       logo.classList.remove(`logo-${section}`);
