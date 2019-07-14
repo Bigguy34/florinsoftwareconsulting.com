@@ -22,6 +22,7 @@
   align-self: baseline;
   transform: rotate(270deg);
   margin-top: 45px;
+  margin-right: -9px;
 }
 
 .services-section-button-shift {
@@ -29,6 +30,7 @@
   align-self: baseline;
   transform: rotate(270deg);
   margin-top: 90px;
+  margin-right: -9px;
 }
 
 .services-section-button-home {
@@ -36,4 +38,5 @@
   align-self: baseline;
   transform: rotate(270deg);
   margin-top: 45px;
+  margin-right: -9px;
 }

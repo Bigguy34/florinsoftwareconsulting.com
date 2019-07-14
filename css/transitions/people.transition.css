@@ -1,0 +1,9 @@
+@keyframes peopleSectionButtonShift {
+  0% { margin-bottom: 35px }
+  100% { margin-bottom: 80px }
+}
+
+@keyframes peopleSectionButton {
+  0% { margin-bottom: 80px }
+  100% { margin-bottom: 35px }
+}

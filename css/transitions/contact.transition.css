@@ -1,0 +1,9 @@
+@keyframes contactSectionButtonShift {
+  0% { margin-top: 45px }
+  100% { margin-top: 90px }
+}
+
+@keyframes contactSectionButton {
+  0% { margin-top: 90px }
+  100% { margin-top: 45px }
+}

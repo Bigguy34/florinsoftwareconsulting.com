@@ -1,14 +1,41 @@
+@import url('./transitions/contact.transition.css');
+
 .contact-zoom-section {
   position: relative;
-  top: 39px;
-  left: -6px;
+  width: 100%;
+  height: 100%;
 }
 .contact-zoom-section-inner {
-  transform: rotate(270deg);
-  float: left; 
+  width: 100%;
+  height: 100%;
+  display: flex;
 }
 
 #contact{
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
+}
+
+.contact-button-margin {
+  align-self: baseline;
+  transform: rotate(270deg);
+  margin-top: 45px;
+  margin-left: -11px;
+}
+
+.contact-section-button-shift {
+  animation: contactSectionButtonShift 1.5s;
+  align-self: baseline;
+  transform: rotate(270deg);
+  margin-top: 90px;
+  margin-left: -11px;
+}
+
+.contact-section-button-home {
+  animation: contactSectionButton 1.5s;
+  align-self: baseline;
+  transform: rotate(270deg);
+  margin-top: 45px;
+  margin-left: -11px;
 }

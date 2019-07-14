@@ -34,3 +34,31 @@
   margin-top: 60px;
   transform: rotate(0deg)
 }
+
+.logo-people-home {
+  animation: logoPeopleHomeTransition 1.5s;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  transform: rotate(-55deg);
+}
+
+.logo-people {
+  animation: logoPeopleTransition 1.5s;
+  margin-left: 60px;
+  margin-bottom: 60px;
+  transform: rotate(0deg)
+}
+
+.logo-contact-home {
+  animation: logoContactHomeTransition 1.5s;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  transform: rotate(-55deg);
+}
+
+.logo-contact {
+  animation: logoContactTransition 1.5s;
+  margin-left: 60px;
+  margin-top: 60px;
+  transform: rotate(0deg)
+}
