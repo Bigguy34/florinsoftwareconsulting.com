@@ -21,7 +21,7 @@
   align-self: flex-end;
   transform: rotate(270deg);
   margin-bottom: 35px;
-  margin-left: -4px;
+  margin-left: 5px;
 }
 
 .people-section-button-shift {
@@ -29,7 +29,7 @@
   align-self: flex-end;
   transform: rotate(270deg);
   margin-bottom: 80px;
-  margin-left: -4px;
+  margin-left: 5px;
 }
 
 .people-section-button-home {
@@ -37,5 +37,5 @@
   align-self: flex-end;
   transform: rotate(270deg);
   margin-bottom: 35px;
-  margin-left: -4px;
+  margin-left: 5px;
 }
