@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "name": "florinsoftwareconsulting.com",
+  "version": "1.0.0",
+  "description": "Our florinsoftware consulting website",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tailwind build index.css -o output.css -c tailwind.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^1.0.5"
+  }
+}

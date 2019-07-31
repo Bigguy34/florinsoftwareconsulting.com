@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html{
+    font-family: 'Lato', sans-serif;
+}
+
+.hero {
+    background-image: url( ./img/hero.svg) bottom cover, url(./img/rocket.jpg) center cover;
+    height: 500px;
+}
