@@ -11,29 +11,31 @@
     <title>Document</title>
 </head>
 <body>
-  <nav class="flex items-center justify-between flex-wrap p-6">
-    <div class="flex items-center flex-shrink-0 text-black mr-6">
-        <img id="logo" class="logo-home" src="./img/header.svg" style="width:8em;">
-    </div>
-    <div class="block lg:hidden">
-      <button class="flex items-center px-3 py-2 border rounded text-black-200 border-black-400 hover:text-black hover:border-white">
-        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-      </button>
-    </div>
-    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-      <div class="text-sm lg:flex-grow">
-        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-black mr-4 text-lg">
-          ABOUT
-        </a>
-        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-black mr-4 text-lg">
-         SERVICES
-        </a>
-        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-black text-lg">
-          CONTACT
-        </a>
+  <div class="container mx-auto">
+    <nav class="flex items-center justify-between flex-wrap p-6">
+      <div class="flex items-center flex-shrink-0 text-black mr-6">
+          <img id="logo" class="logo-home" src="./img/header.svg" style="width:8em;">
       </div>
-    </div>
-  </nav>
+      <div class="block lg:hidden">
+        <button id="nav-button" class="flex items-center px-3 py-2 border rounded text-black-200 border-black-400 hover:text-black hover:border-white" onclick="openNav()">
+          <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+        </button>
+      </div>
+      <div id="nav-menu-items" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden">
+          <div class="text-sm lg:flex-grow flex justify-end lg:flex-row flex-col float-right">
+          <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-black mr-4 text-lg">
+            ABOUT
+          </a>
+          <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-black mr-4 text-lg">
+          SERVICES
+          </a>
+          <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-black text-lg">
+            CONTACT
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
 <div class="flex content-between items-center flex-col bg-fixed bg-cover bg-center" style="background-image: url(./img/rocket.jpg); height:400px">
   <div class="self-center mt-6">
     <img class="m-6 float-left h-24 w-24" src="./img/logo_white_background.svg"/>
@@ -71,4 +73,16 @@ Thomas Florin, 8 years of software engineering experience. Worked on building ev
   </div>
 </div>
 </body>
+<script>
+  let closed = true;
+  function openNav() {
+    let navMobileMenu = document.getElementById('nav-menu-items')
+    if (closed) {
+      navMobileMenu.classList.remove('hidden')
+    } else {
+      navMobileMenu.classList.add('hidden')
+    }
+    closed = !closed;
+  }
+</script>
 </html>
