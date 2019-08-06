@@ -7,7 +7,7 @@
     <title>Florin Software Consulting</title>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="./output.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,400&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -47,28 +47,27 @@
       </p>
   </div>
 </div>
-<div class="container mx-auto">
-  <div>
-    <img src="./img/toptitleheader.svg"/>
-  </div>
-  <div class="m-6">
-    <h1 class="italic font-thin text-2xl">About</h1>
-  </div>
-  <div>
-    <img src="./img/bottomtitleheader.svg"/>
-  </div>
-  <div>
-    <p>
-        We started Florin Software because we saw a common pattern in the industry with the shift from legacy monolithic code bases, with little to no testing to a stronger focus on modular smaller services and a focus on service separation, infrastructure and quality.  This also introduces a cultural change in development teams, one where collaboration and communication becomes much more important, and a focus point for development teams. 
-    </p>
-    <p>
-  Additionally at Florin Software Consulting we employee several <a href="https://medium.com/netflix-techblog/full-cycle-developers-at-netflix-a08c31f83249">full cycle</a> developers who have worked in all parts of the software development process, applying their development expertise to that part of the process. Whether it is automating tests through gherkin and cucumber, deploying to AWS with terraform, writing Go or NodeJS microservices, they or writing large React or Angular frontends.
-  </p>
-  <p>
-    <img class="float-left rounded-full" src="./img/thomasflorin.jpeg"/>
-Thomas Florin, 8 years of software engineering experience. Worked on building everything from legacy monoliths to microservice architectures. Has experience building out CI/CD pipelines, and specializes in infrastructure as code.  Working experience with C#, Javascript, Typescript, Golang, and Kotlin. Built systems using Jenkins, Concourse, and Bamboo. Written infrastructures with Terraform, Ansible, Kubernetes, and AWS.  In addition to having his Masters of Science in Computer Science from UWRF. (Include logos of different services).
-</p>
-  </div>
+<div class="container mx-auto flex flex-col">
+  <section id="about" class="mt-6 flex content-between justify-center">
+    <div class="pr-20">
+      <h2 class="text-4xl font-thin italic content-text header-text">
+        About
+      </h2>
+      <p class="content-text mb-3 text-lg">
+          We started Florin Software because we saw a common pattern in the industry with the shift from legacy monolithic code bases, with little to no testing to a stronger focus on modular smaller services and a focus on service separation, infrastructure and quality.  This also introduces a cultural change in development teams, one where collaboration and communication becomes much more important, and a focus point for development teams. 
+      </p>
+      <p class="content-text text-lg">
+        Additionally at Florin Software Consulting we employee several <a href="https://medium.com/netflix-techblog/full-cycle-developers-at-netflix-a08c31f83249">full cycle</a> developers who have worked in all parts of the software development process, applying their development expertise to that part of the process. Whether it is automating tests through gherkin and cucumber, deploying to AWS with terraform, writing Go or NodeJS microservices, they or writing large React or Angular frontends.
+      </p>
+    </div> 
+      <img class="rounded-full h-64 w-64 shadow-md self-center" src="./img/transformer.png" />
+</section>
+<section id="people" class="mt-6">
+    <p class="content-text text-lg">
+        <img class="float-left rounded-full" src="./img/thomasflorin.jpeg"/>
+    Thomas Florin, 8 years of software engineering experience. Worked on building everything from legacy monoliths to microservice architectures. Has experience building out CI/CD pipelines, and specializes in infrastructure as code.  Working experience with C#, Javascript, Typescript, Golang, and Kotlin. Built systems using Jenkins, Concourse, and Bamboo. Written infrastructures with Terraform, Ansible, Kubernetes, and AWS.  In addition to having his Masters of Science in Computer Science from UWRF. (Include logos of different services).
+      </p>
+</section>
 </div>
 </body>
 </html>
