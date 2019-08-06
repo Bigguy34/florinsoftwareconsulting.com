@@ -1,92 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.png" />
-    <title>Florin Software Consulting</title>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="./output.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,400&display=swap" rel="stylesheet">
-    <title>Document</title>
-</head>
-<body>
-  <div class="container mx-auto">
-    <nav class="flex items-center justify-between flex-wrap p-6">
-      <div class="flex items-center flex-shrink-0 text-black mr-6">
-          <img id="logo" class="logo-home" src="./img/nav_header.svg" style="width:8em;">
-      </div>
-      <div class="block lg:hidden">
-        <button id="nav-button" class="flex items-center px-3 py-2 border rounded text-black-200 border-black-400 hover:text-black hover:border-white" onclick="openNav()">
-          <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-        </button>
-      </div>
-      <div id="nav-menu-items" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden">
-          <div class="text-sm lg:flex-grow flex justify-end lg:flex-row flex-col float-right">
-          <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-black mr-4 text-lg">
-            ABOUT
-          </a>
-          <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-black mr-4 text-lg">
-          SERVICES
-          </a>
-          <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-black text-lg">
-            CONTACT
-          </a>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="shortcut icon" href="favicon.png" />
+      <title>Florin Software Consulting</title>
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" type="text/css" href="./output.css">
+      <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,400&display=swap" rel="stylesheet">
+      <title>Document</title>
+  </head>
+  <body>
+    <div class="container mx-auto">
+      <nav class="flex items-center justify-between flex-wrap p-4">
+        <div class="flex items-center flex-shrink-0 text-black mr-6">
+            <img id="logo" class="logo-home" src="./img/nav_header.svg" style="width:12em;">
         </div>
+        <div class="block lg:hidden">
+          <button id="nav-button" class="flex items-center px-3 py-2 border rounded text-black-200 border-black-400 hover:text-black hover:border-white" onclick="openNav()">
+            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+          </button>
+        </div>
+        <div id="nav-menu-items" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden">
+          <div class="text-sm lg:flex-grow flex justify-end lg:flex-row flex-col float-right">
+            <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-black mr-4 text-lg">
+              ABOUT
+            </a>
+            <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-black mr-4 text-lg">
+            SERVICES
+            </a>
+            <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-black text-lg">
+              CONTACT
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="flex content-between items-center flex-col bg-fixed bg-cover bg-center" style="background-image: url(./img/rocket.jpg); height:400px">
+      <div class="self-center mt-6">
+        <img class="m-6 float-left h-24 w-24" src="./img/logo_white_background.svg"/>
       </div>
-    </nav>
-  </div>
-<div class="flex content-between items-center flex-col bg-fixed bg-cover bg-center" style="background-image: url(./img/rocket.jpg); height:400px">
-  <div class="self-center mt-6">
-    <img class="m-6 float-left h-24 w-24" src="./img/logo_white_background.svg"/>
-  </div>
-  <div class="self-center mt-6">
-    <h2 class="text-2xl text-white font-bold">
-        Start moving your software development cycle at the speed of light.
-      </h2>
-      <p class="text-xl text-white font-thin text-center">
-          And let Florin Software Consulting use their expertise to help.
-      </p>
-  </div>
-</div>
-<div class="container mx-auto flex flex-col">
-  <section id="about" class="mt-6 flex content-between justify-center">
-    <div class="pr-20">
-      <h2 class="text-4xl italic content-text header-text">
-        About
-      </h2>
-      <p class="font-thin content-text mb-3 text-lg">
-          We started Florin Software because we saw a common pattern in the industry with the shift from legacy monolithic code bases, with little to no testing to a stronger focus on modular smaller services and a focus on service separation, infrastructure and quality.  This also introduces a cultural change in development teams, one where collaboration and communication becomes much more important, and a focus point for development teams. 
-      </p>
-      <p class="font-thin content-text text-lg">
-        Additionally at Florin Software Consulting we employee several <a href="https://medium.com/netflix-techblog/full-cycle-developers-at-netflix-a08c31f83249">full cycle</a> developers who have worked in all parts of the software development process, applying their development expertise to that part of the process. Whether it is automating tests through gherkin and cucumber, deploying to AWS with terraform, writing Go or NodeJS microservices, they or writing large React or Angular frontends.
-      </p>
-    </div> 
-      <img class="rounded-full h-64 w-64 shadow-md self-center" src="./img/transformer.png" />
-</section>
-<section id="people" class="mt-6 items-center">
+      <div class="self-center mt-6">
+        <h2 class="text-2xl text-white font-bold">
+            Start moving your software development cycle at the speed of light.
+        </h2>
+        <p class="text-xl text-white font-thin text-center">
+            And let Florin Software Consulting use their expertise to help.
+        </p>
+      </div>
+    </div>
+    <div class="container mx-auto flex flex-col">
+      <section id="about" class="mt-6 flex content-between justify-center">
+        <div>
+          <h2 class="text-4xl italic content-text header-text">
+            About
+          </h2>
+          <p class="font-thin content-text mb-3 text-lg">
+              We started Florin Software because we saw a common pattern in the industry with the shift from legacy monolithic code bases, with little to no testing to a stronger focus on modular smaller services and a focus on service separation, infrastructure and quality.  This also introduces a cultural change in development teams, one where collaboration and communication becomes much more important, and a focus point for development teams. 
+          </p>
+          <p class="font-thin content-text text-lg">
+            Additionally at Florin Software Consulting we employee several <a href="https://medium.com/netflix-techblog/full-cycle-developers-at-netflix-a08c31f83249">full cycle</a> developers who have worked in all parts of the software development process, applying their development expertise to that part of the process. Whether it is automating tests through gherkin and cucumber, deploying to AWS with terraform, writing Go or NodeJS microservices, they or writing large React or Angular frontends.
+          </p>
+        </div> 
+        <div class="ml-20 w-full hidden lg:block">
+            <img class="rounded-full h-64 w-64 shadow-md self-center" src="./img/transformer.png" />
+        </div>
+      </section>
+      <section id="services" class="mt-6 items-center">
+        <div>
+          <h2 class="text-4xl italic content-text header-text text-center">
+            Services
+          </h2>
+          <div style="column-width: 30em;" class="m-auto">
+            <p class="font-thin content-text text-lg">
+              Building and architecting scalable, high quality software. We attain high quality by enforcing a good mixture of integration, system and unit tests. We write scaleable services by researching and understanding the domain, and drawing bounded contexts around separate domains, and solution spaces. At Florin Software consulting we are about finding the best solution for the problem, often that means taking into account not only the available technology, but also the culture of a development organization.
+            </p>
+            <p class="font-thin content-text text-lg">
+              Improving the quality of a product often isn’t about the framework or language, but rather it’s about the software development process, and at Florin Software that is one of our specialities. Discovering parts of your process that can be transformed to deliver high quality faster is something we are passionate about, because ultimately this is how you will see the greatest improvements.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="people" class="mt-6 items-center">
         <div class="pr-20">
           <h2 class="text-4xl italic content-text header-text">
             People
           </h2>
-        <img class="rounded-full object-center" src="./img/thomasflorin.jpeg"/>
-    <p class="font-thin content-text text-center text-lg m-6">
-    Thomas Florin, 8 years of software engineering experience. Worked on building everything from legacy monoliths to microservice architectures. Has experience building out CI/CD pipelines, and specializes in infrastructure as code.  Working experience with C#, Javascript, Typescript, Golang, and Kotlin. Built systems using Jenkins, Concourse, and Bamboo. Written infrastructures with Terraform, Ansible, Kubernetes, and AWS.  In addition to having his Masters of Science in Computer Science from UWRF. (Include logos of different services).
-      </p>
+          <img class="rounded-full object-center" src="./img/thomasflorin.jpeg"/>
+          <p class="font-thin content-text text-center text-lg m-6">
+          Thomas Florin, 8 years of software engineering experience. Worked on building everything from legacy monoliths to microservice architectures. Has experience building out CI/CD pipelines, and specializes in infrastructure as code.  Working experience with C#, Javascript, Typescript, Golang, and Kotlin. Built systems using Jenkins, Concourse, and Bamboo. Written infrastructures with Terraform, Ansible, Kubernetes, and AWS.  In addition to having his Masters of Science in Computer Science from UWRF. (Include logos of different services).
+          </p>
+        </div>
+      </section>
     </div>
-</section>
-</div>
-</body>
-<script>
-  let closed = true;
-  function openNav() {
-    let navMobileMenu = document.getElementById('nav-menu-items')
-    if (closed) {
-      navMobileMenu.classList.remove('hidden')
-    } else {
-      navMobileMenu.classList.add('hidden')
+  </body>
+  <script>
+    let closed = true;
+    function openNav() {
+      let navMobileMenu = document.getElementById('nav-menu-items')
+      if (closed) {
+        navMobileMenu.classList.remove('hidden')
+      } else {
+        navMobileMenu.classList.add('hidden')
+      }
+      closed = !closed;
     }
-    closed = !closed;
-  }
-</script>
+  </script>
 </html>
